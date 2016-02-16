@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="CalculatorJS.sandbox.Food.html" file="Food.html.xml" />
+  <dependency className="CalculatorJS.sandbox.Food" file="Food.js" />
+</dependenciesRoot>
+
