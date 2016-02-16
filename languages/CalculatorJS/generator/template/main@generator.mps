@@ -214,11 +214,6 @@
       <ref role="2rTdP9" to="t2om:54pKSKgoIb$" resolve="InputField" />
       <ref role="2rZz_L" to="rh3e:bcrrPfbui4" resolve="JSVariableDeclaration" />
     </node>
-    <node concept="2rT7sh" id="54pKSKgoRtz" role="2rTMjI">
-      <property role="TrG5h" value="outputFields" />
-      <ref role="2rTdP9" to="t2om:54pKSKgoIcg" resolve="OutputField" />
-      <ref role="2rZz_L" to="rh3e:bcrrPfbui4" resolve="JSVariableDeclaration" />
-    </node>
     <node concept="3aamgX" id="54pKSKgoLLs" role="3acgRq">
       <ref role="30HIoZ" to="t2om:54pKSKgoL20" resolve="InputFieldReference" />
       <node concept="1Koe21" id="54pKSKgoLLw" role="1lVwrX">

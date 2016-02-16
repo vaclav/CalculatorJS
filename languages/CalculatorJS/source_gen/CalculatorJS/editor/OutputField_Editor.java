@@ -10,6 +10,9 @@ import jetbrains.mps.nodeEditor.cells.EditorCell_Collection;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
 import jetbrains.mps.nodeEditor.cellProviders.CellProviderWithRole;
 import jetbrains.mps.lang.editor.cellProviders.PropertyCellProvider;
+import jetbrains.mps.openapi.editor.style.Style;
+import jetbrains.mps.editor.runtime.style.StyleImpl;
+import jetbrains.mps.baseLanguage.editor.BaseLanguageStyle_StyleSheet;
 import jetbrains.mps.nodeEditor.EditorManager;
 import jetbrains.mps.lang.editor.cellProviders.SingleRoleCellProvider;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
@@ -31,7 +34,7 @@ public class OutputField_Editor extends DefaultNodeEditor {
     return editorCell;
   }
   private EditorCell createConstant_57hct5_a0(EditorContext editorContext, SNode node) {
-    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "Output field");
+    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "Calculated value:");
     editorCell.setCellId("Constant_57hct5_a0");
     editorCell.setDefaultText("");
     return editorCell;
@@ -43,6 +46,9 @@ public class OutputField_Editor extends DefaultNodeEditor {
     EditorCell editorCell;
     editorCell = provider.createEditorCell(editorContext);
     editorCell.setCellId("property_name");
+    Style style = new StyleImpl();
+    BaseLanguageStyle_StyleSheet.apply_Field(style, editorCell);
+    editorCell.getStyle().putAll(style);
     editorCell.setSubstituteInfo(provider.createDefaultSubstituteInfo());
     SNode attributeConcept = provider.getRoleAttribute();
     Class attributeKind = provider.getRoleAttributeClass();
@@ -53,7 +59,7 @@ public class OutputField_Editor extends DefaultNodeEditor {
     return editorCell;
   }
   private EditorCell createConstant_57hct5_c0(EditorContext editorContext, SNode node) {
-    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, ":");
+    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "=");
     editorCell.setCellId("Constant_57hct5_c0");
     editorCell.setDefaultText("");
     return editorCell;

@@ -15,6 +15,9 @@ public class EditorAspectDescriptorImpl extends EditorAspectDescriptorBase {
   public Collection<ConceptEditor> getDeclaredEditors(SAbstractConcept concept) {
     {
       SAbstractConcept cncpt = ((SAbstractConcept) concept);
+      if (SConceptOperations.isExactly(SNodeOperations.asSConcept(cncpt), MetaAdapterFactory.getConcept(0x73f4da510e3e448cL, 0xa68b428ef5388ac7L, 0x1c0cfa9a1cc95c07L, "CalculatorJS.structure.Calculator"))) {
+        return Collections.<ConceptEditor>singletonList(new Calculator_Editor());
+      }
       if (SConceptOperations.isExactly(SNodeOperations.asSConcept(cncpt), MetaAdapterFactory.getConcept(0x73f4da510e3e448cL, 0xa68b428ef5388ac7L, 0x5119c38c1062e2e4L, "CalculatorJS.structure.InputField"))) {
         return Collections.<ConceptEditor>singletonList(new InputField_Editor());
       }
