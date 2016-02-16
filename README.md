@@ -23,5 +23,7 @@ The MPS Calculator tutorial (https://www.jetbrains.com/mps/help/mps-calculator-l
   * open the project with MPS
   * rebuild the project
   * the *sandbox* solution contains a complete sample form, which you can generate and get an html page with an associated javascript program
+  * open the generated html page in a browser and check the JavaScript functionality (the page is located in CalculatorJS/languages/CalculatorJS/sandbox/source_gen/CalculatorJS/sandbox/)
+
 
 
