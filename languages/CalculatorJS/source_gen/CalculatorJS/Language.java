@@ -11,6 +11,8 @@ import jetbrains.mps.generator.runtime.TemplateUtil;
 import jetbrains.mps.smodel.runtime.ILanguageAspect;
 import jetbrains.mps.openapi.editor.descriptor.EditorAspectDescriptor;
 import CalculatorJS.editor.EditorAspectDescriptorImpl;
+import jetbrains.mps.smodel.runtime.MakeAspectDescriptor;
+import CalculatorJS.plugin.FacetAspectDescriptor;
 import jetbrains.mps.smodel.runtime.StructureAspectDescriptor;
 
 public class Language extends LanguageRuntime {
@@ -42,6 +44,9 @@ public class Language extends LanguageRuntime {
   protected <T extends ILanguageAspect> T createAspect(Class<T> aspectClass) {
     if (aspectClass == EditorAspectDescriptor.class) {
       return (T) new EditorAspectDescriptorImpl();
+    }
+    if (aspectClass == MakeAspectDescriptor.class) {
+      return (T) new FacetAspectDescriptor();
     }
     if (aspectClass == StructureAspectDescriptor.class) {
       return (T) new CalculatorJS.structure.StructureAspectDescriptor();

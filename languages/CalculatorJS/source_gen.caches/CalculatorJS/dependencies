@@ -2,6 +2,7 @@
 <dependenciesRoot>
   <dependency className="CalculatorJS.Language" file="Language.java">
     <classNode dependClassName="CalculatorJS.editor.EditorAspectDescriptorImpl" />
+    <classNode dependClassName="CalculatorJS.plugin.FacetAspectDescriptor" />
     <classNode dependClassName="CalculatorJS.structure.StructureAspectDescriptor" />
     <classNode dependClassName="java.lang.Class" />
     <classNode dependClassName="java.lang.Override" />
@@ -13,6 +14,7 @@
     <classNode dependClassName="jetbrains.mps.openapi.editor.descriptor.EditorAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.ids.SLanguageId" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.ILanguageAspect" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.MakeAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.StructureAspectDescriptor" />
     <classNode extendsClassName="jetbrains.mps.smodel.language.LanguageRuntime" />
   </dependency>
