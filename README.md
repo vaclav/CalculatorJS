@@ -18,8 +18,8 @@ The MPS Calculator tutorial (https://www.jetbrains.com/mps/help/mps-calculator-l
 ## Try it out
 
   * clone the github project
-  * install MPS version 3.3
-  * install the ecmascript4mps [language plugin into MPS](https://www.jetbrains.com/mps/help/mps-calculator-language-tutorial.html)
+  * install MPS version 3.3 from the [JetBrains MPS download page](http://jetbrains.com/mps/download)
+  * install the ecmascript4mps [language plugin into MPS](https://plugins.jetbrains.com/plugin/8199)
   * open the project with MPS
   * rebuild the project
   * the *sandbox* solution contains a complete sample form, which you can generate and get an html page with an associated javascript program
