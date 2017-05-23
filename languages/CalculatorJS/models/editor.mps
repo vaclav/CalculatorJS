@@ -2,7 +2,7 @@
 <model ref="r:a4fb7324-e77c-489d-a465-9b9fb15c7158(CalculatorJS.editor)">
   <persistence version="9" />
   <languages>
-    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="3" />
+    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="7" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
@@ -79,7 +79,7 @@
         <property role="3F0ifm" value="=" />
       </node>
       <node concept="3F1sOY" id="54pKSKgoId8" role="3EZMnx">
-        <ref role="1NtTu8" to="t2om:54pKSKgoIcj" />
+        <ref role="1NtTu8" to="t2om:54pKSKgoIcj" resolve="value" />
       </node>
       <node concept="l2Vlx" id="54pKSKgoIcM" role="2iSdaV" />
     </node>
@@ -87,7 +87,7 @@
   <node concept="24kQdi" id="54pKSKgoL2r">
     <ref role="1XX52x" to="t2om:54pKSKgoL20" resolve="InputFieldReference" />
     <node concept="1iCGBv" id="54pKSKgoL2t" role="2wV5jI">
-      <ref role="1NtTu8" to="t2om:54pKSKgoL21" />
+      <ref role="1NtTu8" to="t2om:54pKSKgoL21" resolve="target" />
       <node concept="1sVBvm" id="54pKSKgoL2v" role="1sWHZn">
         <node concept="3F0A7n" id="54pKSKgoL2A" role="2wV5jI">
           <property role="1Intyy" value="true" />
@@ -116,7 +116,7 @@
         </node>
       </node>
       <node concept="3F2HdR" id="71i7bZgPb1G" role="3EZMnx">
-        <ref role="1NtTu8" to="t2om:54pKSKgoIce" />
+        <ref role="1NtTu8" to="t2om:54pKSKgoIce" resolve="inputField" />
         <node concept="2iRkQZ" id="71i7bZgPq4T" role="2czzBx" />
         <node concept="ljvvj" id="71i7bZgPb1P" role="3F10Kt">
           <property role="VOm3f" value="true" />
@@ -138,7 +138,7 @@
         </node>
       </node>
       <node concept="3F2HdR" id="71i7bZgPb2J" role="3EZMnx">
-        <ref role="1NtTu8" to="t2om:54pKSKgoIdo" />
+        <ref role="1NtTu8" to="t2om:54pKSKgoIdo" resolve="outputField" />
         <node concept="2iRkQZ" id="71i7bZgPq4X" role="2czzBx" />
       </node>
       <node concept="l2Vlx" id="71i7bZgPb1b" role="2iSdaV" />

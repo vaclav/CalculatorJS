@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<debug-info>
+<debug-info version="2">
   <root nodeRef="r:1cab8266-c757-4484-abeb-7d65e6e1200a(CalculatorJS.sandbox)/3040828037357598431">
     <file name="MyWorksheet.html.xml">
       <unit id="3040828037357598431" at="1,0,48,7" name="CalculatorJS.sandbox.MyWorksheet$html" />

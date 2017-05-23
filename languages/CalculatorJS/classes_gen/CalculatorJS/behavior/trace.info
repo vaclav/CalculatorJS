@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<debug-info>
+<debug-info version="2">
   <root>
-    <file name="Calculator_BehaviorDescriptor.java">
-      <unit at="14,0,26,0" name="CalculatorJS.behavior.Calculator_BehaviorDescriptor" />
-    </file>
-    <file name="InputFieldReference_BehaviorDescriptor.java">
-      <unit at="12,0,21,0" name="CalculatorJS.behavior.InputFieldReference_BehaviorDescriptor" />
-    </file>
-    <file name="InputField_BehaviorDescriptor.java">
-      <unit at="14,0,26,0" name="CalculatorJS.behavior.InputField_BehaviorDescriptor" />
-    </file>
-    <file name="OutputField_BehaviorDescriptor.java">
-      <unit at="14,0,26,0" name="CalculatorJS.behavior.OutputField_BehaviorDescriptor" />
+    <file name="BehaviorAspectDescriptor.java">
+      <unit at="11,0,22,0" name="CalculatorJS.behavior.BehaviorAspectDescriptor" />
     </file>
   </root>
 </debug-info>

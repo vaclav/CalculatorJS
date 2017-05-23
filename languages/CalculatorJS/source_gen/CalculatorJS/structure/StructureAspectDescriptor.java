@@ -4,18 +4,23 @@ package CalculatorJS.structure;
 
 import jetbrains.mps.smodel.runtime.BaseStructureAspectDescriptor;
 import jetbrains.mps.smodel.runtime.ConceptDescriptor;
-import jetbrains.mps.smodel.runtime.impl.ConceptDescriptorBuilder;
-import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
 import java.util.Collection;
 import java.util.Arrays;
 import org.jetbrains.annotations.Nullable;
+import jetbrains.mps.smodel.adapter.ids.SConceptId;
+import org.jetbrains.mps.openapi.language.SAbstractConcept;
+import jetbrains.mps.smodel.runtime.impl.ConceptDescriptorBuilder2;
 
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
+  /*package*/ final ConceptDescriptor myConceptCalculator = createDescriptorForCalculator();
+  /*package*/ final ConceptDescriptor myConceptInputField = createDescriptorForInputField();
+  /*package*/ final ConceptDescriptor myConceptInputFieldReference = createDescriptorForInputFieldReference();
+  /*package*/ final ConceptDescriptor myConceptOutputField = createDescriptorForOutputField();
+  private final LanguageConceptSwitch myConceptIndex;
 
-  /*package*/ final ConceptDescriptor myConceptCalculator = new ConceptDescriptorBuilder("CalculatorJS.structure.Calculator", MetaIdFactory.conceptId(0x73f4da510e3e448cL, 0xa68b428ef5388ac7L, 0x1c0cfa9a1cc95c07L)).super_("jetbrains.mps.lang.core.structure.BaseConcept").super_(MetaIdFactory.conceptId(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x10802efe25aL)).parents("jetbrains.mps.lang.core.structure.BaseConcept", "jetbrains.mps.lang.core.structure.INamedConcept").parentIds(MetaIdFactory.conceptId(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x10802efe25aL), MetaIdFactory.conceptId(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L)).childDescriptors(new ConceptDescriptorBuilder.Link(5843916997827683086L, "inputField", MetaIdFactory.conceptId(0x73f4da510e3e448cL, 0xa68b428ef5388ac7L, 0x5119c38c1062e2e4L), true, true, false), new ConceptDescriptorBuilder.Link(5843916997827683160L, "outputField", MetaIdFactory.conceptId(0x73f4da510e3e448cL, 0xa68b428ef5388ac7L, 0x5119c38c1062e310L), true, true, false)).children(new String[]{"inputField", "outputField"}, new boolean[]{true, true}).alias("calculator", "").create();
-  /*package*/ final ConceptDescriptor myConceptInputField = new ConceptDescriptorBuilder("CalculatorJS.structure.InputField", MetaIdFactory.conceptId(0x73f4da510e3e448cL, 0xa68b428ef5388ac7L, 0x5119c38c1062e2e4L)).super_("jetbrains.mps.lang.core.structure.BaseConcept").super_(MetaIdFactory.conceptId(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x10802efe25aL)).parents("jetbrains.mps.lang.core.structure.BaseConcept", "jetbrains.mps.lang.core.structure.INamedConcept").parentIds(MetaIdFactory.conceptId(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x10802efe25aL), MetaIdFactory.conceptId(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L)).alias("input field", "").create();
-  /*package*/ final ConceptDescriptor myConceptInputFieldReference = new ConceptDescriptorBuilder("CalculatorJS.structure.InputFieldReference", MetaIdFactory.conceptId(0x73f4da510e3e448cL, 0xa68b428ef5388ac7L, 0x5119c38c10631080L)).super_("org.mar9000.mps.ecmascript.structure.JSExpression").super_(MetaIdFactory.conceptId(0xa48297046b1b4b3fL, 0x8122a4a2e6ac90ffL, 0x76eb757dfbac2099L)).parents("org.mar9000.mps.ecmascript.structure.JSExpression").parentIds(MetaIdFactory.conceptId(0xa48297046b1b4b3fL, 0x8122a4a2e6ac90ffL, 0x76eb757dfbac2099L)).referenceDescriptors(new ConceptDescriptorBuilder.Ref(5843916997827694721L, "target", MetaIdFactory.conceptId(0x73f4da510e3e448cL, 0xa68b428ef5388ac7L, 0x5119c38c1062e2e4L), false)).references("target").create();
-  /*package*/ final ConceptDescriptor myConceptOutputField = new ConceptDescriptorBuilder("CalculatorJS.structure.OutputField", MetaIdFactory.conceptId(0x73f4da510e3e448cL, 0xa68b428ef5388ac7L, 0x5119c38c1062e310L)).super_("jetbrains.mps.lang.core.structure.BaseConcept").super_(MetaIdFactory.conceptId(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x10802efe25aL)).parents("jetbrains.mps.lang.core.structure.BaseConcept", "jetbrains.mps.lang.core.structure.INamedConcept").parentIds(MetaIdFactory.conceptId(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x10802efe25aL), MetaIdFactory.conceptId(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L)).childDescriptors(new ConceptDescriptorBuilder.Link(5843916997827683091L, "value", MetaIdFactory.conceptId(0xa48297046b1b4b3fL, 0x8122a4a2e6ac90ffL, 0x76eb757dfbac2099L), false, false, false)).children(new String[]{"value"}, new boolean[]{false}).alias("output field", "").create();
+  public StructureAspectDescriptor() {
+    myConceptIndex = new LanguageConceptSwitch();
+  }
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
@@ -24,19 +29,58 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   @Nullable
-  public ConceptDescriptor getDescriptor(String conceptFqName) {
-    switch (Arrays.binarySearch(stringSwitchCases_1htk8d_a0a0i, conceptFqName)) {
-      case 0:
+  public ConceptDescriptor getDescriptor(SConceptId id) {
+    switch (myConceptIndex.index(id)) {
+      case LanguageConceptSwitch.Calculator:
         return myConceptCalculator;
-      case 1:
+      case LanguageConceptSwitch.InputField:
         return myConceptInputField;
-      case 2:
+      case LanguageConceptSwitch.InputFieldReference:
         return myConceptInputFieldReference;
-      case 3:
+      case LanguageConceptSwitch.OutputField:
         return myConceptOutputField;
       default:
         return null;
     }
   }
-  private static String[] stringSwitchCases_1htk8d_a0a0i = new String[]{"CalculatorJS.structure.Calculator", "CalculatorJS.structure.InputField", "CalculatorJS.structure.InputFieldReference", "CalculatorJS.structure.OutputField"};
+
+  /*package*/ int internalIndex(SAbstractConcept c) {
+    return myConceptIndex.index(c);
+  }
+
+  private static ConceptDescriptor createDescriptorForCalculator() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("CalculatorJS", "Calculator", 0x73f4da510e3e448cL, 0xa68b428ef5388ac7L, 0x1c0cfa9a1cc95c07L);
+    b.class_(false, false, true);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:777db787-7bec-48b0-b73b-6edaca65b33b(CalculatorJS.structure)/2021265872597376007");
+    b.aggregate("inputField", 0x5119c38c1062e30eL).target(0x73f4da510e3e448cL, 0xa68b428ef5388ac7L, 0x5119c38c1062e2e4L).optional(true).ordered(true).multiple(true).origin("5843916997827683086").done();
+    b.aggregate("outputField", 0x5119c38c1062e358L).target(0x73f4da510e3e448cL, 0xa68b428ef5388ac7L, 0x5119c38c1062e310L).optional(true).ordered(true).multiple(true).origin("5843916997827683160").done();
+    b.alias("calculator");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForInputField() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("CalculatorJS", "InputField", 0x73f4da510e3e448cL, 0xa68b428ef5388ac7L, 0x5119c38c1062e2e4L);
+    b.class_(false, false, false);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:777db787-7bec-48b0-b73b-6edaca65b33b(CalculatorJS.structure)/5843916997827683044");
+    b.alias("input field");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForInputFieldReference() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("CalculatorJS", "InputFieldReference", 0x73f4da510e3e448cL, 0xa68b428ef5388ac7L, 0x5119c38c10631080L);
+    b.class_(false, false, false);
+    b.super_("org.mar9000.mps.ecmascript.structure.JSExpression", 0xa48297046b1b4b3fL, 0x8122a4a2e6ac90ffL, 0x76eb757dfbac2099L);
+    b.origin("r:777db787-7bec-48b0-b73b-6edaca65b33b(CalculatorJS.structure)/5843916997827694720");
+    b.associate("target", 0x5119c38c10631081L).target(0x73f4da510e3e448cL, 0xa68b428ef5388ac7L, 0x5119c38c1062e2e4L).optional(false).origin("5843916997827694721").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForOutputField() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("CalculatorJS", "OutputField", 0x73f4da510e3e448cL, 0xa68b428ef5388ac7L, 0x5119c38c1062e310L);
+    b.class_(false, false, false);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:777db787-7bec-48b0-b73b-6edaca65b33b(CalculatorJS.structure)/5843916997827683088");
+    b.aggregate("value", 0x5119c38c1062e313L).target(0xa48297046b1b4b3fL, 0x8122a4a2e6ac90ffL, 0x76eb757dfbac2099L).optional(false).ordered(true).multiple(false).origin("5843916997827683091").done();
+    b.alias("output field");
+    return b.create();
+  }
 }

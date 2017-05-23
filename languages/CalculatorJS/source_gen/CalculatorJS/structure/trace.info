@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<debug-info>
+<debug-info version="2">
   <root>
+    <file name="ConceptPresentationAspectImpl.java">
+      <unit at="11,0,34,0" name="CalculatorJS.structure.ConceptPresentationAspectImpl" />
+    </file>
+    <file name="LanguageConceptSwitch.java">
+      <unit at="10,0,34,0" name="CalculatorJS.structure.LanguageConceptSwitch" />
+    </file>
     <file name="StructureAspectDescriptor.java">
-      <unit at="13,0,43,0" name="CalculatorJS.structure.StructureAspectDescriptor" />
+      <unit at="14,0,87,0" name="CalculatorJS.structure.StructureAspectDescriptor" />
     </file>
   </root>
 </debug-info>
