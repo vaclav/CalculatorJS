@@ -18,6 +18,10 @@ import jetbrains.mps.make.resources.IPropertiesAccessor;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.mps.openapi.util.ProgressMonitor;
 import jetbrains.mps.smodel.resources.TResource;
+import jetbrains.mps.make.MakeSession;
+import jetbrains.mps.lang.core.plugin.TextGen_Facet.Target_configure;
+import jetbrains.mps.project.Project;
+import jetbrains.mps.vfs.FileSystem;
 import jetbrains.mps.internal.make.runtime.util.DeltaReconciler;
 import jetbrains.mps.internal.make.runtime.util.FilesDelta;
 import jetbrains.mps.vfs.IFile;
@@ -62,27 +66,34 @@ public class RenameXmlToHtml_Facet extends IFacet.Stub {
           switch (0) {
             case 0:
               for (IResource resource : input) {
-                TResource tres = ((TResource) resource);
-                new DeltaReconciler(tres.delta()).visitAll(new FilesDelta.Visitor() {
-                  @Override
-                  public boolean acceptWritten(IFile file) {
-                    doRename(file);
-                    return super.acceptWritten(file);
-                  }
+                MakeSession session = Target_configure.vars(pa.global()).makeSession();
+                final Project project = session.getProject();
 
-                  @Override
-                  public boolean acceptKept(IFile file) {
-                    doRename(file);
-                    return super.acceptKept(file);
-                  }
-                  private void doRename(IFile file) {
-                    String name = file.getName();
-                    if (name.endsWith(".html.xml")) {
-                      file.rename(name.substring(0, name.length() - 4));
-                    }
+                final TResource tres = ((TResource) resource);
+                FileSystem.getInstance().runWriteTransaction(new Runnable() {
+                  public void run() {
+                    new DeltaReconciler(tres.delta()).visitAll(new FilesDelta.Visitor() {
+                      @Override
+                      public boolean acceptWritten(IFile file) {
+                        doRename(file);
+                        return super.acceptWritten(file);
+                      }
+
+                      @Override
+                      public boolean acceptKept(IFile file) {
+                        doRename(file);
+                        return super.acceptKept(file);
+                      }
+                      private void doRename(final IFile file) {
+                        String name = file.getName();
+                        if (name.endsWith(".html.xml")) {
+                          file.rename(name.substring(0, name.length() - 4));
+                        }
+
+                      }
+                    });
                   }
                 });
-
               }
             default:
               return new IResult.SUCCESS(_output_5y1u67_a0a);
