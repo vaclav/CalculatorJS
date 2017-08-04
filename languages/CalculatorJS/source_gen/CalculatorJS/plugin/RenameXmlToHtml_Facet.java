@@ -66,7 +66,7 @@ public class RenameXmlToHtml_Facet extends IFacet.Stub {
           switch (0) {
             case 0:
               for (IResource resource : input) {
-                MakeSession session = Target_configure.vars(pa.global()).makeSession();
+                MakeSession session = Target_configure.vars(pa.global()).unused();
                 final Project project = session.getProject();
 
                 final TResource tres = ((TResource) resource);
@@ -96,6 +96,7 @@ public class RenameXmlToHtml_Facet extends IFacet.Stub {
                 });
               }
             default:
+              progressMonitor.done();
               return new IResult.SUCCESS(_output_5y1u67_a0a);
           }
         }
