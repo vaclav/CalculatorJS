@@ -145,10 +145,6 @@
       </concept>
     </language>
     <language id="696c1165-4a59-463b-bc5d-902caab85dd0" name="jetbrains.mps.make.facet">
-      <concept id="3344436107830227889" name="jetbrains.mps.make.facet.structure.ForeignParametersComponentExpression" flags="nn" index="2bn25q" />
-      <concept id="3344436107830227888" name="jetbrains.mps.make.facet.structure.ForeignParametersExpression" flags="nn" index="2bn25r">
-        <reference id="3344436107830227902" name="target" index="2bn25l" />
-      </concept>
       <concept id="6418371274763029565" name="jetbrains.mps.make.facet.structure.TargetDeclaration" flags="ng" index="15KeUm">
         <child id="2360002718792633290" name="job" index="ElM8M" />
         <child id="6418371274763146553" name="dependency" index="15LFui" />
@@ -196,52 +192,18 @@
     </node>
     <node concept="15KeUm" id="3$KOL9ugF57" role="15LFul">
       <property role="TrG5h" value="doRename" />
-      <node concept="15KeVb" id="3$KOL9uht7U" role="15LFui">
-        <ref role="15KeV8" to="fy8e:taepSZ9rBr" resolve="make" />
-      </node>
       <node concept="15KeVb" id="3$KOL9ugF5M" role="15LFui">
         <property role="3HPxAp" value="AFTER" />
         <ref role="15KeV8" to="fy8e:taepSZ9r$W" resolve="reconcile" />
+      </node>
+      <node concept="15KeVb" id="3$KOL9uht7U" role="15LFui">
+        <ref role="15KeV8" to="fy8e:taepSZ9rBr" resolve="make" />
       </node>
       <node concept="2aLE7I" id="3$KOL9ugF58" role="ElM8M">
         <node concept="ElOhj" id="3$KOL9ugF59" role="2aLE7H">
           <node concept="3clFbS" id="3$KOL9ugF5a" role="2VODD2">
             <node concept="1DcWWT" id="3$KOL9uh4qE" role="3cqZAp">
               <node concept="3clFbS" id="3$KOL9uh4qG" role="2LFqv$">
-                <node concept="3cpWs8" id="13fUX79sEoL" role="3cqZAp">
-                  <node concept="3cpWsn" id="13fUX79sEoM" role="3cpWs9">
-                    <property role="TrG5h" value="session" />
-                    <node concept="3uibUv" id="13fUX79sEoI" role="1tU5fm">
-                      <ref role="3uigEE" to="hfuk:7yGn3z4N4Nd" resolve="MakeSession" />
-                    </node>
-                    <node concept="2bn25q" id="13fUX79sEoN" role="33vP2m">
-                      <node concept="2bn25r" id="13fUX79sEoO" role="2Oq$k0">
-                        <ref role="2bn25l" to="tpcq:72ouys9JzGh" resolve="configure" />
-                      </node>
-                      <node concept="2sxana" id="13fUX79sEoP" role="2OqNvi">
-                        <ref role="2sxfKC" to="tpcq:72ouys9JDlL" resolve="makeSession" />
-                      </node>
-                    </node>
-                  </node>
-                </node>
-                <node concept="3cpWs8" id="13fUX79sIfP" role="3cqZAp">
-                  <node concept="3cpWsn" id="13fUX79sIfQ" role="3cpWs9">
-                    <property role="TrG5h" value="project" />
-                    <property role="3TUv4t" value="true" />
-                    <node concept="3uibUv" id="13fUX79sIfJ" role="1tU5fm">
-                      <ref role="3uigEE" to="z1c3:~Project" resolve="Project" />
-                    </node>
-                    <node concept="2OqwBi" id="13fUX79sIfR" role="33vP2m">
-                      <node concept="37vLTw" id="13fUX79sIfS" role="2Oq$k0">
-                        <ref role="3cqZAo" node="13fUX79sEoM" resolve="session" />
-                      </node>
-                      <node concept="liA8E" id="13fUX79sIfT" role="2OqNvi">
-                        <ref role="37wK5l" to="hfuk:2BjwmTxTf34" resolve="getProject" />
-                      </node>
-                    </node>
-                  </node>
-                </node>
-                <node concept="3clFbH" id="13fUX79sPYz" role="3cqZAp" />
                 <node concept="3cpWs8" id="3$KOL9uh5mk" role="3cqZAp">
                   <node concept="3cpWsn" id="3$KOL9uh5ml" role="3cpWs9">
                     <property role="TrG5h" value="tres" />

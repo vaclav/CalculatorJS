@@ -18,9 +18,6 @@ import jetbrains.mps.make.resources.IPropertiesAccessor;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.mps.openapi.util.ProgressMonitor;
 import jetbrains.mps.smodel.resources.TResource;
-import jetbrains.mps.make.MakeSession;
-import jetbrains.mps.lang.core.plugin.TextGen_Facet.Target_configure;
-import jetbrains.mps.project.Project;
 import jetbrains.mps.vfs.FileSystem;
 import jetbrains.mps.internal.make.runtime.util.DeltaReconciler;
 import jetbrains.mps.internal.make.runtime.util.FilesDelta;
@@ -66,9 +63,6 @@ public class RenameXmlToHtml_Facet extends IFacet.Stub {
           switch (0) {
             case 0:
               for (IResource resource : input) {
-                MakeSession session = Target_configure.vars(pa.global()).unused();
-                final Project project = session.getProject();
-
                 final TResource tres = ((TResource) resource);
                 FileSystem.getInstance().runWriteTransaction(new Runnable() {
                   public void run() {
