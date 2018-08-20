@@ -16,10 +16,10 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptInputField = createDescriptorForInputField();
   /*package*/ final ConceptDescriptor myConceptInputFieldReference = createDescriptorForInputFieldReference();
   /*package*/ final ConceptDescriptor myConceptOutputField = createDescriptorForOutputField();
-  private final LanguageConceptSwitch myConceptIndex;
+  private final LanguageConceptSwitch myIndexSwitch;
 
   public StructureAspectDescriptor() {
-    myConceptIndex = new LanguageConceptSwitch();
+    myIndexSwitch = new LanguageConceptSwitch();
   }
 
   @Override
@@ -30,7 +30,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   @Override
   @Nullable
   public ConceptDescriptor getDescriptor(SConceptId id) {
-    switch (myConceptIndex.index(id)) {
+    switch (myIndexSwitch.index(id)) {
       case LanguageConceptSwitch.Calculator:
         return myConceptCalculator;
       case LanguageConceptSwitch.InputField:
@@ -45,7 +45,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   }
 
   /*package*/ int internalIndex(SAbstractConcept c) {
-    return myConceptIndex.index(c);
+    return myIndexSwitch.index(c);
   }
 
   private static ConceptDescriptor createDescriptorForCalculator() {
@@ -53,6 +53,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, true);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:777db787-7bec-48b0-b73b-6edaca65b33b(CalculatorJS.structure)/2021265872597376007");
+    b.version(2);
     b.aggregate("inputField", 0x5119c38c1062e30eL).target(0x73f4da510e3e448cL, 0xa68b428ef5388ac7L, 0x5119c38c1062e2e4L).optional(true).ordered(true).multiple(true).origin("5843916997827683086").done();
     b.aggregate("outputField", 0x5119c38c1062e358L).target(0x73f4da510e3e448cL, 0xa68b428ef5388ac7L, 0x5119c38c1062e310L).optional(true).ordered(true).multiple(true).origin("5843916997827683160").done();
     b.alias("calculator");
@@ -63,6 +64,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, false);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:777db787-7bec-48b0-b73b-6edaca65b33b(CalculatorJS.structure)/5843916997827683044");
+    b.version(2);
     b.alias("input field");
     return b.create();
   }
@@ -71,6 +73,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, false);
     b.super_("org.mar9000.mps.ecmascript.structure.JSExpression", 0xa48297046b1b4b3fL, 0x8122a4a2e6ac90ffL, 0x76eb757dfbac2099L);
     b.origin("r:777db787-7bec-48b0-b73b-6edaca65b33b(CalculatorJS.structure)/5843916997827694720");
+    b.version(2);
     b.associate("target", 0x5119c38c10631081L).target(0x73f4da510e3e448cL, 0xa68b428ef5388ac7L, 0x5119c38c1062e2e4L).optional(false).origin("5843916997827694721").done();
     return b.create();
   }
@@ -79,6 +82,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, false);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:777db787-7bec-48b0-b73b-6edaca65b33b(CalculatorJS.structure)/5843916997827683088");
+    b.version(2);
     b.aggregate("value", 0x5119c38c1062e313L).target(0xa48297046b1b4b3fL, 0x8122a4a2e6ac90ffL, 0x76eb757dfbac2099L).optional(false).ordered(true).multiple(false).origin("5843916997827683091").done();
     b.alias("output field");
     return b.create();
