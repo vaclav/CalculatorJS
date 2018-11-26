@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
-  <dependency className="CalculatorJS.editor.Calculator_Editor" file="Calculator_Editor.java">
+  <dependency className="CalculatorJS.editor.Calculator_Editor">
     <classNode dependClassName="CalculatorJS.editor.Calculator_EditorBuilder_a" />
     <classNode dependClassName="jetbrains.mps.openapi.editor.EditorContext" />
     <classNode dependClassName="jetbrains.mps.openapi.editor.cells.EditorCell" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.nodeEditor.DefaultNodeEditor" />
   </dependency>
-  <dependency className="CalculatorJS.editor.Calculator_EditorBuilder_a" file="Calculator_EditorBuilder_a.java">
+  <dependency className="CalculatorJS.editor.Calculator_EditorBuilder_a">
     <classNode dependClassName="java.lang.Iterable" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.util.Objects" />
@@ -50,7 +50,7 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.editor.runtime.descriptor.AbstractEditorBuilder" />
   </dependency>
-  <dependency className="CalculatorJS.editor.EditorAspectDescriptorImpl" file="EditorAspectDescriptorImpl.java">
+  <dependency className="CalculatorJS.editor.EditorAspectDescriptorImpl">
     <classNode dependClassName="CalculatorJS.editor.Calculator_Editor" />
     <classNode dependClassName="CalculatorJS.editor.InputFieldReference_Editor" />
     <classNode dependClassName="CalculatorJS.editor.InputFieldReference_SubstituteMenu" />
@@ -68,14 +68,14 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
     <classNode extendsClassName="jetbrains.mps.nodeEditor.EditorAspectDescriptorBase" />
   </dependency>
-  <dependency className="CalculatorJS.editor.InputFieldReference_Editor" file="InputFieldReference_Editor.java">
+  <dependency className="CalculatorJS.editor.InputFieldReference_Editor">
     <classNode dependClassName="CalculatorJS.editor.InputFieldReference_EditorBuilder_a" />
     <classNode dependClassName="jetbrains.mps.openapi.editor.EditorContext" />
     <classNode dependClassName="jetbrains.mps.openapi.editor.cells.EditorCell" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.nodeEditor.DefaultNodeEditor" />
   </dependency>
-  <dependency className="CalculatorJS.editor.InputFieldReference_EditorBuilder_a" file="InputFieldReference_EditorBuilder_a.java">
+  <dependency className="CalculatorJS.editor.InputFieldReference_EditorBuilder_a">
     <classNode dependClassName="java.lang.Iterable" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
@@ -117,7 +117,7 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.editor.runtime.descriptor.AbstractEditorBuilder" />
   </dependency>
-  <dependency className="CalculatorJS.editor.InputFieldReference_SubstituteMenu" file="InputFieldReference_SubstituteMenu.java">
+  <dependency className="CalculatorJS.editor.InputFieldReference_SubstituteMenu">
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.util.ArrayList" />
     <classNode dependClassName="java.util.Collection" />
@@ -138,14 +138,14 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
     <classNode extendsClassName="jetbrains.mps.nodeEditor.menus.substitute.SubstituteMenuBase" />
   </dependency>
-  <dependency className="CalculatorJS.editor.InputField_Editor" file="InputField_Editor.java">
+  <dependency className="CalculatorJS.editor.InputField_Editor">
     <classNode dependClassName="CalculatorJS.editor.InputField_EditorBuilder_a" />
     <classNode dependClassName="jetbrains.mps.openapi.editor.EditorContext" />
     <classNode dependClassName="jetbrains.mps.openapi.editor.cells.EditorCell" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.nodeEditor.DefaultNodeEditor" />
   </dependency>
-  <dependency className="CalculatorJS.editor.InputField_EditorBuilder_a" file="InputField_EditorBuilder_a.java">
+  <dependency className="CalculatorJS.editor.InputField_EditorBuilder_a">
     <classNode dependClassName="java.lang.Iterable" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.util.Objects" />
@@ -177,14 +177,14 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.editor.runtime.descriptor.AbstractEditorBuilder" />
   </dependency>
-  <dependency className="CalculatorJS.editor.OutputField_Editor" file="OutputField_Editor.java">
+  <dependency className="CalculatorJS.editor.OutputField_Editor">
     <classNode dependClassName="CalculatorJS.editor.OutputField_EditorBuilder_a" />
     <classNode dependClassName="jetbrains.mps.openapi.editor.EditorContext" />
     <classNode dependClassName="jetbrains.mps.openapi.editor.cells.EditorCell" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.nodeEditor.DefaultNodeEditor" />
   </dependency>
-  <dependency className="CalculatorJS.editor.OutputField_EditorBuilder_a" file="OutputField_EditorBuilder_a.java">
+  <dependency className="CalculatorJS.editor.OutputField_EditorBuilder_a">
     <classNode dependClassName="java.lang.Iterable" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />

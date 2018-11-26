@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
-  <dependency className="CalculatorJS.Generator" file="Generator.java">
+  <dependency className="CalculatorJS.Generator">
     <classNode dependClassName="CalculatorJS.generator.template.main.QueriesGenerated" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.util.Arrays" />

@@ -75,7 +75,7 @@ import jetbrains.mps.lang.core.behavior.PropertyAttribute__BehaviorDescriptor;
           public EditorCell compute() {
             return new InputFieldReference_EditorBuilder_a.Inline_Builder0(getEditorContext(), getNode(), targetNode).createCell();
           }
-        }, targetNode, "target");
+        }, targetNode, MetaAdapterFactory.getReferenceLink(0x73f4da510e3e448cL, 0xa68b428ef5388ac7L, 0x5119c38c10631080L, 0x5119c38c10631081L, "target"));
         CellUtil.setupIDeprecatableStyles(targetNode, cell);
         setSemanticNodeToCells(cell, getNode());
         installDeleteActions_notnull_smartReference(cell);

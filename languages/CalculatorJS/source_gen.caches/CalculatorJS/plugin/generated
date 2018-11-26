@@ -1,3 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependencies version="2" modelHash="4gpe2m8n0dm34533tc6m9xvf51w4fmb" />
+<product version="3" modelHash="6ei0ym49je7m2loous2zm90janhlf41">
+  <files names="FacetAspectDescriptor.java:FacetManifest.java:RenameXmlToHtml_Facet.java" />
+</product>
 

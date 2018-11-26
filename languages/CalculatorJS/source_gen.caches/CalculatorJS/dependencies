@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
-  <dependency className="CalculatorJS.Language" file="Language.java">
+  <dependency className="CalculatorJS.Language">
     <classNode dependClassName="CalculatorJS.behavior.BehaviorAspectDescriptor" />
     <classNode dependClassName="CalculatorJS.constraints.ConstraintsAspectDescriptor" />
     <classNode dependClassName="CalculatorJS.editor.EditorAspectDescriptorImpl" />
