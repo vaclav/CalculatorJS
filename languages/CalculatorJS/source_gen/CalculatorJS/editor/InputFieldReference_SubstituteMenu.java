@@ -14,10 +14,10 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.lang.editor.menus.EditorMenuDescriptorBase;
 import jetbrains.mps.smodel.SNodePointer;
 import jetbrains.mps.lang.editor.menus.substitute.ReferenceScopeSubstituteMenuPart;
+import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.lang.editor.menus.ConceptMenusPart;
 import java.util.Collection;
 import jetbrains.mps.smodel.ConceptDescendantsCache;
-import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.lang.editor.menus.substitute.DefaultSubstituteMenuLookup;
 import jetbrains.mps.smodel.language.LanguageRegistry;
 
@@ -47,7 +47,8 @@ public class InputFieldReference_SubstituteMenu extends SubstituteMenuBase {
   public class SMP_ReferenceScope_i4w2se_a extends ReferenceScopeSubstituteMenuPart {
 
     public SMP_ReferenceScope_i4w2se_a() {
-      super(MetaAdapterFactory.getConcept(0x73f4da510e3e448cL, 0xa68b428ef5388ac7L, 0x5119c38c10631080L, "CalculatorJS.structure.InputFieldReference"), MetaAdapterFactory.getReferenceLink(0x73f4da510e3e448cL, 0xa68b428ef5388ac7L, 0x5119c38c10631080L, 0x5119c38c10631081L, "target"));
+      // that cast is needed for prevent the users from https://youtrack.jetbrains.com/issue/MPS-29051 
+      super((SAbstractConcept) MetaAdapterFactory.getConcept(0x73f4da510e3e448cL, 0xa68b428ef5388ac7L, 0x5119c38c10631080L, "CalculatorJS.structure.InputFieldReference"), MetaAdapterFactory.getReferenceLink(0x73f4da510e3e448cL, 0xa68b428ef5388ac7L, 0x5119c38c10631080L, 0x5119c38c10631081L, "target"));
     }
     @NotNull
     @Override

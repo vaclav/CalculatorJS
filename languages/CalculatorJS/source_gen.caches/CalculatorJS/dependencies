@@ -1,24 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
   <dependency className="CalculatorJS.Language">
-    <classNode dependClassName="CalculatorJS.behavior.BehaviorAspectDescriptor" />
-    <classNode dependClassName="CalculatorJS.constraints.ConstraintsAspectDescriptor" />
     <classNode dependClassName="CalculatorJS.editor.EditorAspectDescriptorImpl" />
     <classNode dependClassName="CalculatorJS.plugin.FacetAspectDescriptor" />
     <classNode dependClassName="CalculatorJS.structure.ConceptPresentationAspectImpl" />
     <classNode dependClassName="CalculatorJS.structure.StructureAspectDescriptor" />
-    <classNode dependClassName="CalculatorJS.typesystem.TypesystemDescriptor" />
     <classNode dependClassName="java.lang.Class" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.util.Collection" />
-    <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.IHelginsDescriptor" />
     <classNode dependClassName="jetbrains.mps.openapi.editor.descriptor.EditorAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.ids.SLanguageId" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
-    <classNode dependClassName="jetbrains.mps.smodel.runtime.BehaviorAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.ConceptPresentationAspect" />
-    <classNode dependClassName="jetbrains.mps.smodel.runtime.ConstraintsAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.ILanguageAspect" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.MakeAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.StructureAspectDescriptor" />

@@ -8,7 +8,6 @@
   <imports>
     <import index="t2om" ref="r:777db787-7bec-48b0-b73b-6edaca65b33b(CalculatorJS.structure)" implicit="true" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
-    <import index="tpen" ref="r:00000000-0000-4000-0000-011c895902c3(jetbrains.mps.baseLanguage.editor)" implicit="true" />
   </imports>
   <registry>
     <language id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor">
@@ -23,9 +22,20 @@
       <concept id="1080736578640" name="jetbrains.mps.lang.editor.structure.BaseEditorComponent" flags="ig" index="2wURMF">
         <child id="1080736633877" name="cellModel" index="2wV5jI" />
       </concept>
+      <concept id="1186402211651" name="jetbrains.mps.lang.editor.structure.StyleSheet" flags="ng" index="V5hpn">
+        <child id="1186402402630" name="styleClass" index="V601i" />
+      </concept>
+      <concept id="1186403694788" name="jetbrains.mps.lang.editor.structure.ColorStyleClassItem" flags="ln" index="VaVBg">
+        <property id="1186403713874" name="color" index="Vb096" />
+      </concept>
+      <concept id="1186403751766" name="jetbrains.mps.lang.editor.structure.FontStyleStyleClassItem" flags="ln" index="Vb9p2">
+        <property id="1186403771423" name="style" index="Vbekb" />
+      </concept>
+      <concept id="1186404549998" name="jetbrains.mps.lang.editor.structure.ForegroundColorStyleClassItem" flags="ln" index="VechU" />
       <concept id="1186414536763" name="jetbrains.mps.lang.editor.structure.BooleanStyleSheetItem" flags="ln" index="VOi$J">
         <property id="1186414551515" name="flag" index="VOm3f" />
       </concept>
+      <concept id="3383245079137382180" name="jetbrains.mps.lang.editor.structure.StyleClass" flags="ig" index="14StLt" />
       <concept id="1088013125922" name="jetbrains.mps.lang.editor.structure.CellModel_RefCell" flags="sg" stub="730538219795941030" index="1iCGBv">
         <child id="1088186146602" name="editorComponent" index="1sWHZn" />
       </concept>
@@ -54,13 +64,18 @@
         <reference id="1166049300910" name="conceptDeclaration" index="1XX52x" />
       </concept>
     </language>
+    <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
+        <property id="1169194664001" name="name" index="TrG5h" />
+      </concept>
+    </language>
   </registry>
   <node concept="24kQdi" id="54pKSKgoIbZ">
     <ref role="1XX52x" to="t2om:54pKSKgoIb$" resolve="InputField" />
     <node concept="3EZMnI" id="54pKSKgoIc1" role="2wV5jI">
       <node concept="3F0A7n" id="54pKSKgoIcb" role="3EZMnx">
         <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-        <ref role="1k5W1q" to="tpen:hshQ_OE" resolve="Field" />
+        <ref role="1k5W1q" node="5vSZFIDxPty" resolve="Field" />
       </node>
       <node concept="l2Vlx" id="54pKSKgoIc4" role="2iSdaV" />
     </node>
@@ -73,7 +88,7 @@
       </node>
       <node concept="3F0A7n" id="54pKSKgoId0" role="3EZMnx">
         <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-        <ref role="1k5W1q" to="tpen:hshQ_OE" resolve="Field" />
+        <ref role="1k5W1q" node="5vSZFIDxPty" resolve="Field" />
       </node>
       <node concept="3F0ifn" id="54pKSKgoIdi" role="3EZMnx">
         <property role="3F0ifm" value="=" />
@@ -92,7 +107,7 @@
         <node concept="3F0A7n" id="54pKSKgoL2A" role="2wV5jI">
           <property role="1Intyy" value="true" />
           <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-          <ref role="1k5W1q" to="tpen:hFD0yD_" resolve="VariableName" />
+          <ref role="1k5W1q" node="5vSZFIDxPtB" resolve="FieldReference" />
         </node>
       </node>
     </node>
@@ -142,6 +157,27 @@
         <node concept="2iRkQZ" id="71i7bZgPq4X" role="2czzBx" />
       </node>
       <node concept="l2Vlx" id="71i7bZgPb1b" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="V5hpn" id="5vSZFIDxPtx">
+    <property role="TrG5h" value="CalculatorStyles" />
+    <node concept="14StLt" id="5vSZFIDxPty" role="V601i">
+      <property role="TrG5h" value="Field" />
+      <node concept="Vb9p2" id="5vSZFIDxPtF" role="3F10Kt">
+        <property role="Vbekb" value="BOLD_ITALIC" />
+      </node>
+      <node concept="VechU" id="5vSZFIDxPtK" role="3F10Kt">
+        <property role="Vb096" value="DARK_MAGENTA" />
+      </node>
+    </node>
+    <node concept="14StLt" id="5vSZFIDxPtB" role="V601i">
+      <property role="TrG5h" value="FieldReference" />
+      <node concept="Vb9p2" id="5vSZFIDxPtO" role="3F10Kt">
+        <property role="Vbekb" value="ITALIC" />
+      </node>
+      <node concept="VechU" id="5vSZFIDxPtP" role="3F10Kt">
+        <property role="Vb096" value="DARK_MAGENTA" />
+      </node>
     </node>
   </node>
 </model>
