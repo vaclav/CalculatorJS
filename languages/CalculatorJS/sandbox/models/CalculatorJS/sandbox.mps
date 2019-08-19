@@ -3,7 +3,7 @@
   <persistence version="9" />
   <languages>
     <use id="73f4da51-0e3e-448c-a68b-428ef5388ac7" name="CalculatorJS" version="-1" />
-    <use id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core" version="1" />
+    <use id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core" version="2" />
     <use id="a4829704-6b1b-4b3f-8122-a4a2e6ac90ff" name="org.mar9000.mps.ecmascript" version="0" />
   </languages>
   <imports />
@@ -42,9 +42,9 @@
     <node concept="11uM2s" id="54pKSKgoL1N" role="11uM3k">
       <property role="TrG5h" value="Charge to customer" />
       <node concept="2dhUHT" id="71i7bZgPvZ8" role="11uM2v">
-        <property role="2dhUDU" value="+" />
+        <property role="2dhUDU" value="7rFtnRVFhfR/boPlus" />
         <node concept="2dhUHT" id="71i7bZgPvZl" role="2dhUFW">
-          <property role="2dhUDU" value="*" />
+          <property role="2dhUDU" value="7rFtnRVFhgi/boMul" />
           <node concept="11uHcc" id="71i7bZgPvZu" role="2dhUC2">
             <ref role="11uHcd" node="71i7bZgPvYF" resolve="Design" />
           </node>
@@ -53,9 +53,9 @@
           </node>
         </node>
         <node concept="2dhUHT" id="54pKSKgoL1R" role="2dhUC2">
-          <property role="2dhUDU" value="+" />
+          <property role="2dhUDU" value="7rFtnRVFhfR/boPlus" />
           <node concept="2dhUHT" id="54pKSKgoLKY" role="2dhUFW">
-            <property role="2dhUDU" value="*" />
+            <property role="2dhUDU" value="7rFtnRVFhgi/boMul" />
             <node concept="11uHcc" id="54pKSKgoLL7" role="2dhUC2">
               <ref role="11uHcd" node="54pKSKgoL1K" resolve="PHP" />
             </node>
@@ -64,7 +64,7 @@
             </node>
           </node>
           <node concept="2dhUHT" id="54pKSKgoLLe" role="2dhUC2">
-            <property role="2dhUDU" value="*" />
+            <property role="2dhUDU" value="7rFtnRVFhgi/boMul" />
             <node concept="11uHcc" id="54pKSKgoLLn" role="2dhUC2">
               <ref role="11uHcd" node="54pKSKgoL1I" resolve="Java" />
             </node>
@@ -78,9 +78,9 @@
     <node concept="11uM2s" id="54pKSKgp4eQ" role="11uM3k">
       <property role="TrG5h" value="Tax" />
       <node concept="2dhUHT" id="54pKSKgp4f2" role="11uM2v">
-        <property role="2dhUDU" value="+" />
+        <property role="2dhUDU" value="7rFtnRVFhfR/boPlus" />
         <node concept="2dhUHT" id="54pKSKgp4f3" role="2dhUFW">
-          <property role="2dhUDU" value="*" />
+          <property role="2dhUDU" value="7rFtnRVFhgi/boMul" />
           <node concept="11uHcc" id="54pKSKgp4f4" role="2dhUC2">
             <ref role="11uHcd" node="54pKSKgoL1K" resolve="PHP" />
           </node>
@@ -89,7 +89,7 @@
           </node>
         </node>
         <node concept="2dhUHT" id="54pKSKgp4f6" role="2dhUC2">
-          <property role="2dhUDU" value="*" />
+          <property role="2dhUDU" value="7rFtnRVFhgi/boMul" />
           <node concept="11uHcc" id="54pKSKgp4f7" role="2dhUC2">
             <ref role="11uHcd" node="54pKSKgoL1I" resolve="Java" />
           </node>
@@ -102,7 +102,7 @@
     <node concept="11uM2s" id="71i7bZgPvYO" role="11uM3k">
       <property role="TrG5h" value="Overhead cost" />
       <node concept="2dhUHT" id="71i7bZgPvZA" role="11uM2v">
-        <property role="2dhUDU" value="*" />
+        <property role="2dhUDU" value="7rFtnRVFhgi/boMul" />
         <node concept="11uHcc" id="71i7bZgPvZJ" role="2dhUC2">
           <ref role="11uHcd" node="71i7bZgPvYJ" resolve="Administration" />
         </node>

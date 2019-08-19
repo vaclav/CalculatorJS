@@ -10,7 +10,6 @@ import jetbrains.mps.openapi.editor.menus.substitute.SubstituteMenuItem;
 import jetbrains.mps.openapi.editor.menus.substitute.SubstituteMenuContext;
 import java.util.ArrayList;
 import jetbrains.mps.lang.editor.menus.substitute.ConstraintsFilteringSubstituteMenuPartDecorator;
-import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.lang.editor.menus.EditorMenuDescriptorBase;
 import jetbrains.mps.smodel.SNodePointer;
 import jetbrains.mps.lang.editor.menus.substitute.ReferenceScopeSubstituteMenuPart;
@@ -20,14 +19,17 @@ import java.util.Collection;
 import jetbrains.mps.smodel.ConceptDescendantsCache;
 import jetbrains.mps.lang.editor.menus.substitute.DefaultSubstituteMenuLookup;
 import jetbrains.mps.smodel.language.LanguageRegistry;
+import org.jetbrains.mps.openapi.language.SConcept;
+import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import org.jetbrains.mps.openapi.language.SReferenceLink;
 
 public class InputFieldReference_SubstituteMenu extends SubstituteMenuBase {
   @NotNull
   @Override
   protected List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> getParts(final SubstituteMenuContext _context) {
     List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> result = new ArrayList<MenuPart<SubstituteMenuItem, SubstituteMenuContext>>();
-    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new InputFieldReference_SubstituteMenu.SMP_ReferenceScope_i4w2se_a(), MetaAdapterFactory.getConcept(0x73f4da510e3e448cL, 0xa68b428ef5388ac7L, 0x5119c38c10631080L, "CalculatorJS.structure.InputFieldReference")));
-    result.add(new InputFieldReference_SubstituteMenu.SMP_Subconcepts_i4w2se_b());
+    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SMP_ReferenceScope_i4w2se_a(), CONCEPTS.InputFieldReference$kV));
+    result.add(new SMP_Subconcepts_i4w2se_b());
     return result;
   }
 
@@ -48,7 +50,7 @@ public class InputFieldReference_SubstituteMenu extends SubstituteMenuBase {
 
     public SMP_ReferenceScope_i4w2se_a() {
       // that cast is needed for prevent the users from https://youtrack.jetbrains.com/issue/MPS-29051 
-      super((SAbstractConcept) MetaAdapterFactory.getConcept(0x73f4da510e3e448cL, 0xa68b428ef5388ac7L, 0x5119c38c10631080L, "CalculatorJS.structure.InputFieldReference"), MetaAdapterFactory.getReferenceLink(0x73f4da510e3e448cL, 0xa68b428ef5388ac7L, 0x5119c38c10631080L, 0x5119c38c10631081L, "target"));
+      super((SAbstractConcept) CONCEPTS.InputFieldReference$kV, LINKS.target$HIMw);
     }
     @NotNull
     @Override
@@ -65,7 +67,7 @@ public class InputFieldReference_SubstituteMenu extends SubstituteMenuBase {
   }
   public class SMP_Subconcepts_i4w2se_b extends ConceptMenusPart<SubstituteMenuItem, SubstituteMenuContext> {
     protected Collection getConcepts(final SubstituteMenuContext _context) {
-      return ConceptDescendantsCache.getInstance().getDirectDescendants(MetaAdapterFactory.getConcept(0x73f4da510e3e448cL, 0xa68b428ef5388ac7L, 0x5119c38c10631080L, "CalculatorJS.structure.InputFieldReference"));
+      return ConceptDescendantsCache.getInstance().getDirectDescendants(CONCEPTS.InputFieldReference$kV);
     }
     @NotNull
     @Override
@@ -83,5 +85,13 @@ public class InputFieldReference_SubstituteMenu extends SubstituteMenuBase {
     protected Collection<SubstituteMenuItem> createItemsForConcept(SubstituteMenuContext context, SAbstractConcept concept) {
       return context.createItems(new DefaultSubstituteMenuLookup(LanguageRegistry.getInstance(context.getEditorContext().getRepository()), concept));
     }
+  }
+
+  private static final class CONCEPTS {
+    /*package*/ static final SConcept InputFieldReference$kV = MetaAdapterFactory.getConcept(0x73f4da510e3e448cL, 0xa68b428ef5388ac7L, 0x5119c38c10631080L, "CalculatorJS.structure.InputFieldReference");
+  }
+
+  private static final class LINKS {
+    /*package*/ static final SReferenceLink target$HIMw = MetaAdapterFactory.getReferenceLink(0x73f4da510e3e448cL, 0xa68b428ef5388ac7L, 0x5119c38c10631080L, 0x5119c38c10631081L, "target");
   }
 }

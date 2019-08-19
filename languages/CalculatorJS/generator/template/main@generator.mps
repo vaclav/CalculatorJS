@@ -2,10 +2,10 @@
 <model ref="r:f2d7f982-3cb7-4099-b475-c1c07faeaa51(CalculatorJS.generator.template.main@generator)">
   <persistence version="9" />
   <languages>
-    <use id="b401a680-8325-4110-8fd3-84331ff25bef" name="jetbrains.mps.lang.generator" version="2" />
-    <use id="d7706f63-9be2-479c-a3da-ae92af1e64d5" name="jetbrains.mps.lang.generator.generationContext" version="1" />
+    <use id="b401a680-8325-4110-8fd3-84331ff25bef" name="jetbrains.mps.lang.generator" version="3" />
+    <use id="d7706f63-9be2-479c-a3da-ae92af1e64d5" name="jetbrains.mps.lang.generator.generationContext" version="2" />
     <use id="73f4da51-0e3e-448c-a68b-428ef5388ac7" name="CalculatorJS" version="-1" />
-    <use id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core" version="1" />
+    <use id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core" version="2" />
     <use id="a4829704-6b1b-4b3f-8122-a4a2e6ac90ff" name="org.mar9000.mps.ecmascript" version="0" />
     <use id="479c7a8c-02f9-43b5-9139-d910cb22f298" name="jetbrains.mps.core.xml" version="0" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
@@ -283,7 +283,7 @@
       </node>
     </node>
     <node concept="3lhOvk" id="2CNcfOHJE_h" role="3lj3bC">
-      <property role="13Pg2o" value="true" />
+      <property role="13Pg2o" value="h94ayQF/true_" />
       <ref role="30HIoZ" to="t2om:1KcYDCsMlK7" resolve="Calculator" />
       <ref role="3lhOvi" node="2CNcfOHJE_j" resolve="map_Calculator" />
     </node>
@@ -447,7 +447,7 @@
                 </node>
               </node>
               <node concept="2dhUHT" id="54pKSKgoUqs" role="2dhTO1">
-                <property role="2dhUDU" value="+" />
+                <property role="2dhUDU" value="7rFtnRVFhfR/boPlus" />
                 <node concept="2dhBVA" id="54pKSKgoUqt" role="2dhUC2">
                   <property role="2dhB_1" value="10" />
                 </node>

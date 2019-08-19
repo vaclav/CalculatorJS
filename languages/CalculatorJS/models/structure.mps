@@ -2,7 +2,7 @@
 <model ref="r:777db787-7bec-48b0-b73b-6edaca65b33b(CalculatorJS.structure)">
   <persistence version="9" />
   <languages>
-    <use id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure" version="7" />
+    <use id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure" version="9" />
     <use id="a4829704-6b1b-4b3f-8122-a4a2e6ac90ff" name="org.mar9000.mps.ecmascript" version="0" />
     <use id="982eb8df-2c96-4bd7-9963-11712ea622e5" name="jetbrains.mps.lang.resources" version="2" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
@@ -47,16 +47,16 @@
     <property role="EcuMT" value="2021265872597376007" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="54pKSKgoIce" role="1TKVEi">
-      <property role="20lmBu" value="aggregation" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="inputField" />
-      <property role="20lbJX" value="0..n" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
       <property role="IQ2ns" value="5843916997827683086" />
       <ref role="20lvS9" node="54pKSKgoIb$" resolve="InputField" />
     </node>
     <node concept="1TJgyj" id="54pKSKgoIdo" role="1TKVEi">
-      <property role="20lmBu" value="aggregation" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="outputField" />
-      <property role="20lbJX" value="0..n" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
       <property role="IQ2ns" value="5843916997827683160" />
       <ref role="20lvS9" node="54pKSKgoIcg" resolve="OutputField" />
     </node>
@@ -79,9 +79,9 @@
     <property role="EcuMT" value="5843916997827683088" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="54pKSKgoIcj" role="1TKVEi">
-      <property role="20lmBu" value="aggregation" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="value" />
-      <property role="20lbJX" value="1" />
+      <property role="20lbJX" value="fLJekj4/_1" />
       <property role="IQ2ns" value="5843916997827683091" />
       <ref role="20lvS9" to="rh3e:7rFtnRVF22p" resolve="JSExpression" />
     </node>
@@ -94,9 +94,8 @@
     <property role="EcuMT" value="5843916997827694720" />
     <ref role="1TJDcQ" to="rh3e:7rFtnRVF22p" resolve="JSExpression" />
     <node concept="1TJgyj" id="54pKSKgoL21" role="1TKVEi">
-      <property role="20lmBu" value="reference" />
       <property role="20kJfa" value="target" />
-      <property role="20lbJX" value="1" />
+      <property role="20lbJX" value="fLJekj4/_1" />
       <property role="IQ2ns" value="5843916997827694721" />
       <ref role="20lvS9" node="54pKSKgoIb$" resolve="InputField" />
     </node>

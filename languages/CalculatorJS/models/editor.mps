@@ -2,7 +2,7 @@
 <model ref="r:a4fb7324-e77c-489d-a465-9b9fb15c7158(CalculatorJS.editor)">
   <persistence version="9" />
   <languages>
-    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="12" />
+    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="13" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
@@ -164,19 +164,19 @@
     <node concept="14StLt" id="5vSZFIDxPty" role="V601i">
       <property role="TrG5h" value="Field" />
       <node concept="Vb9p2" id="5vSZFIDxPtF" role="3F10Kt">
-        <property role="Vbekb" value="BOLD_ITALIC" />
+        <property role="Vbekb" value="g1_tSyq/BOLD_ITALIC" />
       </node>
       <node concept="VechU" id="5vSZFIDxPtK" role="3F10Kt">
-        <property role="Vb096" value="DARK_MAGENTA" />
+        <property role="Vb096" value="g1_qVrt/darkMagenta" />
       </node>
     </node>
     <node concept="14StLt" id="5vSZFIDxPtB" role="V601i">
       <property role="TrG5h" value="FieldReference" />
       <node concept="Vb9p2" id="5vSZFIDxPtO" role="3F10Kt">
-        <property role="Vbekb" value="ITALIC" />
+        <property role="Vbekb" value="g1_kEg4/ITALIC" />
       </node>
       <node concept="VechU" id="5vSZFIDxPtP" role="3F10Kt">
-        <property role="Vb096" value="DARK_MAGENTA" />
+        <property role="Vb096" value="g1_qVrt/darkMagenta" />
       </node>
     </node>
   </node>

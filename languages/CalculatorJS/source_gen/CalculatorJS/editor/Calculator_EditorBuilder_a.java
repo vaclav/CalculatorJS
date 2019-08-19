@@ -11,13 +11,9 @@ import jetbrains.mps.nodeEditor.cells.EditorCell_Collection;
 import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Indent;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
 import org.jetbrains.mps.openapi.language.SProperty;
-import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.openapi.editor.menus.transformation.SPropertyInfo;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Property;
 import jetbrains.mps.nodeEditor.cells.SPropertyAccessor;
-import jetbrains.mps.openapi.editor.cells.CellActionType;
-import jetbrains.mps.editor.runtime.impl.cellActions.CellAction_DeleteSPropertyOrNode;
-import jetbrains.mps.nodeEditor.cellActions.CellAction_DeleteNode;
 import jetbrains.mps.openapi.editor.style.Style;
 import jetbrains.mps.editor.runtime.style.StyleImpl;
 import jetbrains.mps.editor.runtime.style.StyleAttributes;
@@ -37,9 +33,13 @@ import jetbrains.mps.lang.editor.cellProviders.RefNodeListHandler;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.openapi.editor.menus.transformation.SNodeLocation;
+import jetbrains.mps.openapi.editor.cells.CellActionType;
+import jetbrains.mps.nodeEditor.cellActions.CellAction_DeleteNode;
 import jetbrains.mps.openapi.editor.cells.DefaultSubstituteInfo;
 import jetbrains.mps.nodeEditor.cellMenu.SEmptyContainmentSubstituteInfo;
 import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
+import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import org.jetbrains.mps.openapi.language.SConcept;
 
 /*package*/ class Calculator_EditorBuilder_a extends AbstractEditorBuilder {
   @NotNull
@@ -83,19 +83,17 @@ import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
   private EditorCell createProperty_0() {
     getCellFactory().pushCellContext();
     try {
-      final SProperty property = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
+      final SProperty property = PROPS.name$tAp1;
       getCellFactory().setPropertyInfo(new SPropertyInfo(myNode, property));
       EditorCell_Property editorCell = EditorCell_Property.create(getEditorContext(), new SPropertyAccessor(myNode, property, false, false), myNode);
       editorCell.setDefaultText("<no name>");
-      editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteSPropertyOrNode(myNode, property, CellAction_DeleteNode.DeleteDirection.FORWARD));
-      editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteSPropertyOrNode(myNode, property, CellAction_DeleteNode.DeleteDirection.BACKWARD));
       editorCell.setCellId("property_name");
       Style style = new StyleImpl();
       style.set(StyleAttributes.INDENT_LAYOUT_NEW_LINE, true);
       editorCell.getStyle().putAll(style);
       editorCell.setSubstituteInfo(new SPropertySubstituteInfo(editorCell, property));
       setCellContext(editorCell);
-      Iterable<SNode> propertyAttributes = SNodeOperations.ofConcept(AttributeOperations.getAttributeList(myNode, new IAttributeDescriptor.AllAttributes()), MetaAdapterFactory.getConcept(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x2eb1ad060897da56L, "jetbrains.mps.lang.core.structure.PropertyAttribute"));
+      Iterable<SNode> propertyAttributes = SNodeOperations.ofConcept(AttributeOperations.getAttributeList(myNode, new IAttributeDescriptor.AllAttributes()), CONCEPTS.PropertyAttribute$jT);
       Iterable<SNode> currentPropertyAttributes = Sequence.fromIterable(propertyAttributes).where(new IWhereFilter<SNode>() {
         public boolean accept(SNode it) {
           return Objects.equals(PropertyAttribute__BehaviorDescriptor.getProperty_id1avfQ4BBzOo.invoke(it), property);
@@ -120,7 +118,7 @@ import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
     return editorCell;
   }
   private EditorCell createRefNodeList_0() {
-    AbstractCellListHandler handler = new Calculator_EditorBuilder_a.inputFieldListHandler_uh00px_d0(myNode, getEditorContext());
+    AbstractCellListHandler handler = new inputFieldListHandler_uh00px_d0(myNode, getEditorContext());
     EditorCell_Collection editorCell = handler.createCells(new CellLayout_Vertical(), false);
     editorCell.setCellId("refNodeList_inputField");
     Style style = new StyleImpl();
@@ -143,10 +141,10 @@ import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
       return myNode;
     }
     public SContainmentLink getSLink() {
-      return MetaAdapterFactory.getContainmentLink(0x73f4da510e3e448cL, 0xa68b428ef5388ac7L, 0x1c0cfa9a1cc95c07L, 0x5119c38c1062e30eL, "inputField");
+      return LINKS.inputField$WZFr;
     }
     public SAbstractConcept getChildSConcept() {
-      return MetaAdapterFactory.getConcept(0x73f4da510e3e448cL, 0xa68b428ef5388ac7L, 0x5119c38c1062e2e4L, "CalculatorJS.structure.InputField");
+      return CONCEPTS.InputField$U0;
     }
 
     public EditorCell createNodeCell(SNode elementNode) {
@@ -156,7 +154,7 @@ import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
     }
     public EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(inputFieldListHandler_uh00px_d0.this.getNode(), MetaAdapterFactory.getContainmentLink(0x73f4da510e3e448cL, 0xa68b428ef5388ac7L, 0x1c0cfa9a1cc95c07L, 0x5119c38c1062e30eL, "inputField")));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(inputFieldListHandler_uh00px_d0.this.getNode(), LINKS.inputField$WZFr));
       try {
         EditorCell emptyCell = null;
         emptyCell = super.createEmptyCell();
@@ -200,7 +198,7 @@ import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
     return editorCell;
   }
   private EditorCell createRefNodeList_1() {
-    AbstractCellListHandler handler = new Calculator_EditorBuilder_a.outputFieldListHandler_uh00px_g0(myNode, getEditorContext());
+    AbstractCellListHandler handler = new outputFieldListHandler_uh00px_g0(myNode, getEditorContext());
     EditorCell_Collection editorCell = handler.createCells(new CellLayout_Vertical(), false);
     editorCell.setCellId("refNodeList_outputField");
     editorCell.setSRole(handler.getElementSRole());
@@ -220,10 +218,10 @@ import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
       return myNode;
     }
     public SContainmentLink getSLink() {
-      return MetaAdapterFactory.getContainmentLink(0x73f4da510e3e448cL, 0xa68b428ef5388ac7L, 0x1c0cfa9a1cc95c07L, 0x5119c38c1062e358L, "outputField");
+      return LINKS.outputField$X6rY;
     }
     public SAbstractConcept getChildSConcept() {
-      return MetaAdapterFactory.getConcept(0x73f4da510e3e448cL, 0xa68b428ef5388ac7L, 0x5119c38c1062e310L, "CalculatorJS.structure.OutputField");
+      return CONCEPTS.OutputField$S0;
     }
 
     public EditorCell createNodeCell(SNode elementNode) {
@@ -233,7 +231,7 @@ import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
     }
     public EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(outputFieldListHandler_uh00px_g0.this.getNode(), MetaAdapterFactory.getContainmentLink(0x73f4da510e3e448cL, 0xa68b428ef5388ac7L, 0x1c0cfa9a1cc95c07L, 0x5119c38c1062e358L, "outputField")));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(outputFieldListHandler_uh00px_g0.this.getNode(), LINKS.outputField$X6rY));
       try {
         EditorCell emptyCell = null;
         emptyCell = super.createEmptyCell();
@@ -256,5 +254,20 @@ import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
         }
       }
     }
+  }
+
+  private static final class PROPS {
+    /*package*/ static final SProperty name$tAp1 = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
+  }
+
+  private static final class CONCEPTS {
+    /*package*/ static final SConcept PropertyAttribute$jT = MetaAdapterFactory.getConcept(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x2eb1ad060897da56L, "jetbrains.mps.lang.core.structure.PropertyAttribute");
+    /*package*/ static final SConcept InputField$U0 = MetaAdapterFactory.getConcept(0x73f4da510e3e448cL, 0xa68b428ef5388ac7L, 0x5119c38c1062e2e4L, "CalculatorJS.structure.InputField");
+    /*package*/ static final SConcept OutputField$S0 = MetaAdapterFactory.getConcept(0x73f4da510e3e448cL, 0xa68b428ef5388ac7L, 0x5119c38c1062e310L, "CalculatorJS.structure.OutputField");
+  }
+
+  private static final class LINKS {
+    /*package*/ static final SContainmentLink inputField$WZFr = MetaAdapterFactory.getContainmentLink(0x73f4da510e3e448cL, 0xa68b428ef5388ac7L, 0x1c0cfa9a1cc95c07L, 0x5119c38c1062e30eL, "inputField");
+    /*package*/ static final SContainmentLink outputField$X6rY = MetaAdapterFactory.getContainmentLink(0x73f4da510e3e448cL, 0xa68b428ef5388ac7L, 0x1c0cfa9a1cc95c07L, 0x5119c38c1062e358L, "outputField");
   }
 }

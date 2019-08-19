@@ -21,7 +21,7 @@ public class CalculatorStyles_StyleSheet {
   public static void apply_Field(Style style, EditorCell editorCell) {
     SNode node = (editorCell == null ? null : editorCell.getSNode());
     EditorContext editorContext = (editorCell == null ? null : editorCell.getContext());
-    new CalculatorStyles_StyleSheet.FieldStyleClass(editorContext, node).apply(style, editorCell);
+    new FieldStyleClass(editorContext, node).apply(style, editorCell);
   }
   /**
    * 
@@ -31,7 +31,7 @@ public class CalculatorStyles_StyleSheet {
   public static void apply_FieldReference(Style style, EditorCell editorCell) {
     SNode node = (editorCell == null ? null : editorCell.getSNode());
     EditorContext editorContext = (editorCell == null ? null : editorCell.getContext());
-    new CalculatorStyles_StyleSheet.FieldReferenceStyleClass(editorContext, node).apply(style, editorCell);
+    new FieldReferenceStyleClass(editorContext, node).apply(style, editorCell);
   }
 
   public static class FieldStyleClass extends AbstractStyleClass {
