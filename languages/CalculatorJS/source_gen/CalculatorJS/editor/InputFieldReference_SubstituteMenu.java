@@ -28,7 +28,7 @@ public class InputFieldReference_SubstituteMenu extends SubstituteMenuBase {
   @Override
   protected List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> getParts(final SubstituteMenuContext _context) {
     List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> result = new ArrayList<MenuPart<SubstituteMenuItem, SubstituteMenuContext>>();
-    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SMP_ReferenceScope_i4w2se_a(), CONCEPTS.InputFieldReference$kV));
+    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SMP_ReferenceScope_i4w2se_a(), CONCEPTS.InputFieldReference$6Z));
     result.add(new SMP_Subconcepts_i4w2se_b());
     return result;
   }
@@ -50,7 +50,7 @@ public class InputFieldReference_SubstituteMenu extends SubstituteMenuBase {
 
     public SMP_ReferenceScope_i4w2se_a() {
       // that cast is needed for prevent the users from https://youtrack.jetbrains.com/issue/MPS-29051 
-      super((SAbstractConcept) CONCEPTS.InputFieldReference$kV, LINKS.target$HIMw);
+      super((SAbstractConcept) CONCEPTS.InputFieldReference$6Z, LINKS.target$Lmf$);
     }
     @NotNull
     @Override
@@ -67,7 +67,7 @@ public class InputFieldReference_SubstituteMenu extends SubstituteMenuBase {
   }
   public class SMP_Subconcepts_i4w2se_b extends ConceptMenusPart<SubstituteMenuItem, SubstituteMenuContext> {
     protected Collection getConcepts(final SubstituteMenuContext _context) {
-      return ConceptDescendantsCache.getInstance().getDirectDescendants(CONCEPTS.InputFieldReference$kV);
+      return ConceptDescendantsCache.getInstance().getDirectDescendants(CONCEPTS.InputFieldReference$6Z);
     }
     @NotNull
     @Override
@@ -88,10 +88,10 @@ public class InputFieldReference_SubstituteMenu extends SubstituteMenuBase {
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept InputFieldReference$kV = MetaAdapterFactory.getConcept(0x73f4da510e3e448cL, 0xa68b428ef5388ac7L, 0x5119c38c10631080L, "CalculatorJS.structure.InputFieldReference");
+    /*package*/ static final SConcept InputFieldReference$6Z = MetaAdapterFactory.getConcept(0x73f4da510e3e448cL, 0xa68b428ef5388ac7L, 0x5119c38c10631080L, "CalculatorJS.structure.InputFieldReference");
   }
 
   private static final class LINKS {
-    /*package*/ static final SReferenceLink target$HIMw = MetaAdapterFactory.getReferenceLink(0x73f4da510e3e448cL, 0xa68b428ef5388ac7L, 0x5119c38c10631080L, 0x5119c38c10631081L, "target");
+    /*package*/ static final SReferenceLink target$Lmf$ = MetaAdapterFactory.getReferenceLink(0x73f4da510e3e448cL, 0xa68b428ef5388ac7L, 0x5119c38c10631080L, 0x5119c38c10631081L, "target");
   }
 }
