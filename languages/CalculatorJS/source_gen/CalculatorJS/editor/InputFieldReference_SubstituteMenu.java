@@ -49,7 +49,7 @@ public class InputFieldReference_SubstituteMenu extends SubstituteMenuBase {
   public class SMP_ReferenceScope_i4w2se_a extends ReferenceScopeSubstituteMenuPart {
 
     public SMP_ReferenceScope_i4w2se_a() {
-      // that cast is needed for prevent the users from https://youtrack.jetbrains.com/issue/MPS-29051 
+      // that cast is needed for prevent the users from https://youtrack.jetbrains.com/issue/MPS-29051
       super((SAbstractConcept) CONCEPTS.InputFieldReference$6Z, LINKS.target$Lmf$);
     }
     @NotNull

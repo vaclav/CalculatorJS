@@ -3,6 +3,7 @@
   <persistence version="9" />
   <attribute name="checkpoint" value="DescriptorClasses" />
   <attribute name="generation-plan" value="AspectCPS" />
+  <attribute name="user-objects" value="true" />
   <languages />
   <imports>
     <import index="q6ox" ref="r:92a9b1a2-eebd-4283-be11-68e9cbfe7ca9(CalculatorJS.typesystem)" />
