@@ -39,7 +39,7 @@ public class RenameXmlToHtml_Facet extends IFacet.Stub {
     return null;
   }
   public Iterable<IFacet.Name> required() {
-    return Sequence.fromArray(new IFacet.Name[]{new IFacet.Name("jetbrains.mps.lang.core.TextGen"), new IFacet.Name("jetbrains.mps.lang.core.Generate")});
+    return Sequence.fromArray(new IFacet.Name[]{new IFacet.Name("jetbrains.mps.make.facets.TextGen"), new IFacet.Name("jetbrains.mps.make.facets.Generate")});
   }
   public Iterable<IFacet.Name> extended() {
     return null;
@@ -64,29 +64,27 @@ public class RenameXmlToHtml_Facet extends IFacet.Stub {
             case 0:
               for (IResource resource : input) {
                 final TResource tres = ((TResource) resource);
-                FileSystem.getInstance().runWriteTransaction(new Runnable() {
-                  public void run() {
-                    new DeltaReconciler(tres.delta()).visitAll(new FilesDelta.Visitor() {
-                      @Override
-                      public boolean acceptWritten(IFile file) {
-                        doRename(file);
-                        return super.acceptWritten(file);
+                FileSystem.getInstance().runWriteTransaction(() -> {
+                  new DeltaReconciler(tres.delta()).visitAll(new FilesDelta.Visitor() {
+                    @Override
+                    public boolean acceptWritten(IFile file) {
+                      doRename(file);
+                      return super.acceptWritten(file);
+                    }
+
+                    @Override
+                    public boolean acceptKept(IFile file) {
+                      doRename(file);
+                      return super.acceptKept(file);
+                    }
+                    private void doRename(final IFile file) {
+                      String name = file.getName();
+                      if (name.endsWith(".html.xml")) {
+                        file.rename(name.substring(0, name.length() - 4));
                       }
 
-                      @Override
-                      public boolean acceptKept(IFile file) {
-                        doRename(file);
-                        return super.acceptKept(file);
-                      }
-                      private void doRename(final IFile file) {
-                        String name = file.getName();
-                        if (name.endsWith(".html.xml")) {
-                          file.rename(name.substring(0, name.length() - 4));
-                        }
-
-                      }
-                    });
-                  }
+                    }
+                  });
                 });
               }
             default:
